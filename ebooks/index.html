@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de E-books Gamma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ebooks da Juventude</h1>
+        
+        <p>Acesse conteúdos exclusivos criados pela nossa secretária no Gamma App</p>
+    </header>
+
+    <div class="filter-container">
+        <button class="filter-btn active" onclick="filterSelection('all', this)">Todos</button>
+        <button class="filter-btn" onclick="filterSelection('tecnologia', this)">Tecnologia</button>
+        <button class="filter-btn" onclick="filterSelection('design', this)">Design</button>
+        <button class="filter-btn" onclick="filterSelection('marketing', this)">Marketing</button>
+        <button class="filter-btn" onclick="filterSelection('Saúde', this)">Saúde</button>
+    </div>
+
+    <main id="library-container">
+        </main>
+
+    <script src="script.js"></script>
+</body>
+<footer>
+    <img src="./imagens/logo-site.png" alt="Logo da Biblioteca" class="site-logo">
+</footer>
+</html>
