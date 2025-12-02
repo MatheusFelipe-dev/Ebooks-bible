@@ -1,0 +1,247 @@
+<div class="portal-container">
+    
+    <div class="column-banner">
+        <div class="news-slider">
+            <div class="slides">
+                <div class="slide active">
+                    <img src="https://assets.zyrosite.com/pXRalyCTq2V4OgqJ/pro-jovem-digital-rPTTS9SgMwzqrXFY.jpg" alt="Notícia 1">
+                    <div class="caption">
+                        <h3>ANDRÉ KUBITSCHEK FAZ ENTREGA DE CERTIFICADOS</h3>
+                        <p>E CAPACITAÇÃO PARA JOVENS INSCRITOS NOS PROGRAMAS DA SECRETARIA DA JUVENTUDE</p>
+                        <a href="https://revistadiaria.com.br/artigos-e-opiniao/andre-kubitschek-faz-entrega-de-certificados-de-capacitacao-para-jovens-inscritos-nos-programas-da-secretaria-da-juventude/" class="btn-leia">Ler Matéria</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/pXRalyCTq2V4OgqJ/ak--fotografarayra-67-2ytVoeIlzAlH4ym9.jpg" alt="Notícia 2">
+                    <div class="caption">
+                        <h3>Futuro em conta</h3>
+                        <p>EMOCIONA E INSPIRA MAIS DE 500 JOVENS DO DF A SONHAR GRANDE</p>
+                        <a href="https://revistadiaria.com.br/artigos-e-opiniao/futuro-em-conta-emociona-e-inspira-mais-de-500-jovens-do-df-a-sonhar-grande/" class="btn-leia">Ler Matéria</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://assets.zyrosite.com/pXRalyCTq2V4OgqJ/jovem-candango-6mL0G4QMMWqGbpMF.jpg" alt="Notícia 3">
+                    <div class="caption">
+                        <h3>ANDRÉ KUBITSCHEK IMPULSIONA NOVA ERA NA SECRETARIA DA JUVENTUDE DO DF</h3>
+                        <p>Em apenas um mês à frente da Secretaria de Estado da Juventude do Distrito Federal, André Kubitschek mostrou a que veio: trabalho, entrega e resultados concretos.</p>
+                        <a href="https://revistadiaria.com.br/artigos-e-opiniao/andre-kubitschek-impulsiona-nova-era-na-secretaria-da-juventude-do-df/" class="btn-leia">Ler Matéria</a>
+                    </div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="column-sidebar">
+        <div class="saiba-mais-box">
+            <div class="sidebar-header">
+                <h3>Acesso Rápido</h3>
+            </div>
+            <ul class="quick-links">
+                <li>
+                    <a href="#">
+                        <span class="icon">&#128279;</span> <div class="text">
+                            <strong>Editais e Licitações</strong>
+                            <span>Consulte os documentos oficiais</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">&#128279;</span> <div class="text">
+                            <strong>Conselhos</strong>
+                            <span>Participação social e atas</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">&#128279;</span> <div class="text">
+                            <strong>Fale Conosco</strong>
+                            <span>Canais de atendimento ao cidadão</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">&#128197;</span> <div class="text">
+                            <strong>Agenda Oficial</strong>
+                            <span>Eventos e compromissos</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="btn-all-services">Ver todos os serviços &rarr;</a>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    /* Container Principal - Cria as duas colunas */
+    .portal-container {
+        display: flex;
+        flex-wrap: wrap; /* Permite quebrar linha no celular */
+        gap: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Definição das larguras das colunas */
+    .column-banner {
+        flex: 2; /* Ocupa 2 partes do espaço (aprox 66%) */
+        min-width: 300px;
+    }
+
+    .column-sidebar {
+        flex: 1; /* Ocupa 1 parte do espaço (aprox 33%) */
+        min-width: 280px;
+    }
+
+    /* --- Estilos do Banner (Slider) --- */
+    .news-slider {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Altura fixa para manter alinhamento */
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .slides, .slide { height: 100%; width: 100%; }
+    .slide { display: none; position: relative; animation: fade 1s; }
+    .slide.active { display: block; }
+    .slide img { width: 100%; height: 100%; object-fit: cover; }
+    
+    .caption {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+        width: 100%;
+        padding: 60px 20px 20px;
+        color: white;
+        box-sizing: border-box;
+    }
+    .caption h3 { margin: 0 0 5px 0; font-size: 22px; color: #fff; }
+    .caption p { margin: 0 0 15px 0; font-size: 14px; color: #ddd; }
+    
+    .btn-leia {
+        background: #007bff; color: white; padding: 6px 12px; 
+        text-decoration: none; border-radius: 4px; font-size: 13px;
+        display: inline-block;
+    }
+    
+    .prev, .next {
+        cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%);
+        padding: 16px; color: white; font-weight: bold; font-size: 18px;
+        background: rgba(0,0,0,0.3); border: none; user-select: none;
+    }
+    .next { right: 0; } .prev { left: 0; }
+
+    /* --- Estilos da Barra Lateral (Saiba Mais) --- */
+    .saiba-mais-box {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        height: 400px; /* Mesma altura do banner para alinhar */
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .sidebar-header {
+        background: #003366; /* Azul institucional */
+        padding: 15px;
+        color: white;
+    }
+    .sidebar-header h3 { margin: 0; font-size: 18px; }
+
+    .quick-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
+
+    .quick-links li { border-bottom: 1px solid #e9ecef; }
+
+    .quick-links a {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        text-decoration: none;
+        color: #333;
+        transition: background 0.3s;
+    }
+
+    .quick-links a:hover { background: #e2e6ea; }
+
+    .quick-links .icon {
+        font-size: 24px;
+        margin-right: 15px;
+        color: #007bff;
+    }
+
+    .quick-links .text { display: flex; flex-direction: column; }
+    .quick-links .text strong { font-size: 15px; color: #003366; }
+    .quick-links .text span { font-size: 12px; color: #666; margin-top: 2px; }
+
+    .btn-all-services {
+        display: block;
+        text-align: center;
+        padding: 15px;
+        background: #e9ecef;
+        color: #003366;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        border-top: 1px solid #dee2e6;
+    }
+    .btn-all-services:hover { background: #dde2e6; }
+
+    @keyframes fade { from {opacity: .4} to {opacity: 1} }
+
+    /* Responsividade para Celular */
+    @media (max-width: 768px) {
+        .column-banner, .column-sidebar {
+            flex: 100%; /* Faz empilhar um sobre o outro */
+            height: auto;
+        }
+        .news-slider, .saiba-mais-box {
+            height: auto;
+            min-height: 300px;
+        }
+    }
+</style>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlides() {
+        if(slides.length === 0) return;
+        
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].classList.add("active");
+        setTimeout(showSlides, 5000); 
+    }
+
+    function moveSlide(n) {
+        slideIndex += n - 1; // Ajuste manual simples
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].classList.remove("active");
+        }
+        slides[slideIndex].classList.add("active");
+    }
+
+    showSlides();
+</script>
